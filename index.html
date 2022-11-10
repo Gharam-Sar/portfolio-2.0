@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="auther" content="Gharam">
+  <meta name="description" content="about me ">
+  <title>Gharam's Portfolio</title>
+  <link rel="icon" href="G.png" type="image/x-icon">
+  <link rel="stylesheet" href="main.css" type="text/css">
+</head>
+<body id="body">
+  <div id="page_container">
+    <nav role=”navigation”>
+      <div id="mynav" class="sidenav wrapper">
+        <button autofocus herf="" id="home">
+          <abbr title="Homepage">
+            <img src="img/home.png">
+          </abbr>
+        </button>
+        <button herf="" id="info">
+          <abbr title="Information About me">
+            <img src="img/info.png">
+          </abbr>
+        </button>
+        <button herf="" id="projects">
+          <abbr title="Some projects I created">
+            <img src="img/projects.png">
+          </abbr>
+        </button>
+        <button herf="" id="contact">
+          <abbr title="My Contact Information">
+            <img src="img/contact.png">
+          </abbr>
+        </button>
+      </div>
+    </nav>
+    <main role="main">
+      <div class="theme">
+        <abbr title="Dark or Light Theme">
+          <input checked type="checkbox" id="switch" /><label for="switch"></label></abbr>
+      </div>
+
+      <br><br><br><br>
+      <div id="main_home">
+        <br><br>
+        <div class="divsp">
+          <div>
+            <p class="intro">
+              HI,I'm <span class="myname" id="myname"><strong>Gharam Sarsour &nbsp;</strong></span>
+              <br>
+              <span class="intro2"> &emsp;&emsp;&emsp;
+                &emsp;&emsp;
+                and this is <span class="myname2" id="myname2"><strong>My Portfolio</strong></span></span>
+            </p>
+          </div>
+          <div><img class="avatar" src="img/me.jpeg" alt="Avatar"></div>
+        </div>
+      </div>
+      <div id="main_info">
+      </div>
+      <div id="main_projects">
+      </div>
+      <div id="main_contact">
+      </div>
+    </main>
+  </div>
+
+</body>
+
+<script>
+  const homeDiv = document.getElementById("main_home");
+  const infoDiv = document.getElementById("main_info");
+  const projectsDiv = document.getElementById("main_projects");
+  const contactDiv = document.getElementById("main_contact");
+  const btn_home = document.getElementById("home");
+  const btn_info = document.getElementById("info");
+  const btn_projects = document.getElementById("projects");
+  const btn_contact = document.getElementById("contact");
+  const theme = document.getElementById("switch");
+  btn_home.onclick = function () {
+    (document.getElementById("main_home")).style.display = "block";
+    (document.getElementById("main_info")).style.display = "none";
+    (document.getElementById("main_projects")).style.display = "none";
+    (document.getElementById("main_contact")).style.display = "none";
+  };
+  btn_info.onclick = function () {
+    (document.getElementById("main_home")).style.display = "none";
+    (document.getElementById("main_info")).style.display = "block";
+    (document.getElementById("main_projects")).style.display = "none";
+    (document.getElementById("main_contact")).style.display = "none";
+  };
+  btn_projects.onclick = function () {
+
+    (document.getElementById("main_home")).style.display = "none";
+    (document.getElementById("main_info")).style.display = "none";
+    (document.getElementById("main_projects")).style.display = "block";
+    (document.getElementById("main_contact")).style.display = "none";
+  };
+  btn_contact.onclick = function () {
+
+    (document.getElementById("main_home")).style.display = "none";
+    (document.getElementById("main_info")).style.display = "none";
+    (document.getElementById("main_projects")).style.display = "none";
+    (document.getElementById("main_contact")).style.display = "block";
+  };
+
+  theme.onclick = function () {
+    if (theme.checked) {
+      (document.getElementById("body")).style.backgroundColor = '#e9e9e9';
+      (document.getElementById("myname")).style.color = '#585858';
+      (document.getElementById("myname2")).style.color = '#585858';
+
+
+    }
+    if (!theme.checked) {
+
+      (document.getElementById("body")).style.backgroundColor = '#7a7a7a';
+      (document.getElementById("myname")).style.color = '#e9e9e9';
+      (document.getElementById("myname2")).style.color = '#e9e9e9';
+
+    }
+  };
+
+
+</script>
+
+</html>
